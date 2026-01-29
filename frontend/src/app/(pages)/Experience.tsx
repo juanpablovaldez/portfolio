@@ -1,5 +1,7 @@
+import { Suspense } from "react";
 import { BriefcaseBusiness } from "lucide-react";
 import ExperienceList from "@/components/specific/ExperienceList";
+import ExperienceSkeleton from "@/components/skeletons/ExperienceSkeleton";
 
 function Experience() {
   return (
@@ -9,7 +11,9 @@ function Experience() {
         Experience
       </h2>
       <article className="section__content">
-        <ExperienceList />
+        <Suspense fallback={<ExperienceSkeleton />}>
+          <ExperienceList />
+        </Suspense>
       </article>
     </section>
   );

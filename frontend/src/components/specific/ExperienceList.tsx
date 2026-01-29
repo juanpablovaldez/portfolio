@@ -1,13 +1,23 @@
-import { experienceList } from "@/constants/experienceList";
+import Link from "next/link";
 import TagList from "@/components/common/TagList";
 import ExpandableContainer from "../common/ExpandableContainer";
-import Link from "next/link";
+import {
+  getStrapiData,
+  flattenTextItems,
+  flattenTechnologies,
+  flattenSkillItems,
+} from "@/lib/strapi";
 
-function ExperienceList() {
+async function ExperienceList() {
+  const experiences = await getStrapiData<WorkExperience[]>(
+    "work-experiences?populate=*&sort=order",
+  );
+
   return (
     <ol className="experience__list">
-      {experienceList.map(
+      {experiences.map(
         ({
+          id,
           company,
           companyUrl,
           position,
@@ -17,7 +27,7 @@ function ExperienceList() {
           technologies,
           softSkills,
         }) => (
-          <li key={company} className="experience__item">
+          <li key={id} className="experience__item">
             <div className="experience__header">
               <h3 className="experience__role">{position}</h3>
               <h4 className="experience__company">
@@ -40,15 +50,15 @@ function ExperienceList() {
             </div>
             <div className="experience__description">
               <ExpandableContainer maxHeight={100}>
-                {description.map((paragraph, index) => (
+                {flattenTextItems(description).map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}
               </ExpandableContainer>
-              <TagList list={technologies} />
-              <TagList list={softSkills} />
+              <TagList list={flattenTechnologies(technologies)} />
+              <TagList list={flattenSkillItems(softSkills)} />
             </div>
           </li>
-        )
+        ),
       )}
     </ol>
   );

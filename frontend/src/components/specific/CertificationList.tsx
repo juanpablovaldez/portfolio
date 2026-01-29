@@ -1,8 +1,12 @@
 import { Award, Github, Link2 } from "lucide-react";
-import { certificationsList } from "@/constants/certificationsList";
 import Link from "next/link";
+import { getStrapiData } from "@/lib/strapi";
 
-function CertificationList() {
+async function CertificationList() {
+  const certifications = await getStrapiData<Certification[]>(
+    "certifications?sort=order",
+  );
+
   return (
     <div className="education__list--certifications">
       <div className="education__header">
@@ -11,8 +15,8 @@ function CertificationList() {
       </div>
       <div className="education__certifications-wrapper">
         <ol className="education__list--container">
-          {certificationsList.map((certification) => (
-            <li key={certification.course} className="education__cert-item">
+          {certifications.map((certification) => (
+            <li key={certification.id} className="education__cert-item">
               <div
                 className="education__cert-card"
                 role="group"
@@ -27,24 +31,28 @@ function CertificationList() {
                   </h4>
                 </div>
                 <div className="education__cert-links">
-                  <Link
-                    href={certification.certificate}
-                    aria-label={`Link to the ${certification.course} certificate.`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="education__cert-link"
-                  >
-                    <Link2 className="education__icon--certification" />
-                  </Link>
-                  <Link
-                    href={certification.project}
-                    aria-label={`Link to the ${certification.course} project.`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="education__cert-link"
-                  >
-                    <Github className="education__icon--certification" />
-                  </Link>
+                  {certification.certificateUrl && (
+                    <Link
+                      href={certification.certificateUrl}
+                      aria-label={`Link to the ${certification.course} certificate.`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="education__cert-link"
+                    >
+                      <Link2 className="education__icon--certification" />
+                    </Link>
+                  )}
+                  {certification.projectUrl && (
+                    <Link
+                      href={certification.projectUrl}
+                      aria-label={`Link to the ${certification.course} project.`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="education__cert-link"
+                    >
+                      <Github className="education__icon--certification" />
+                    </Link>
+                  )}
                 </div>
               </div>
             </li>
