@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_skill_items",
+  "info": {
+    "displayName": "Skill Item",
+    "icon": "star",
+    "description": "Soft skill name"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

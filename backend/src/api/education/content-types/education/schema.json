@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "educations",
+  "info": {
+    "singularName": "education",
+    "pluralName": "educations",
+    "displayName": "Education",
+    "description": "Educational background and qualifications"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "course": {
+      "type": "string",
+      "required": true
+    },
+    "institution": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "string"
+    },
+    "achievements": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.text-item"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}
