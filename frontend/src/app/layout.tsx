@@ -6,10 +6,10 @@ import Footer from "@/components/specific/Footer";
 import { ThemeProvider } from "@/context/themeContext";
 import { MenuProvider } from "@/context/MenuContext";
 import Script from "next/script";
-import { cookies } from 'next/headers';
+import { cookies } from "next/headers";
 import type { Theme } from "@/types/types";
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 import ScrollToTop from "@/components/common/ScrollToTop";
 
 const onest = Onest({
@@ -30,7 +30,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://vleonardojuanpablo.com/"),
+  metadataBase: new URL("https://juanpablovaldez.com/"),
   title:
     "Leonardo Valdez | Frontend Engineer – React, TypeScript, Next.js Expert",
   icons: {
@@ -71,9 +71,9 @@ export const metadata: Metadata = {
     "Tucumán Argentina",
   ],
   alternates: {
-    canonical: "https://vleonardojuanpablo.com/",
+    canonical: "https://juanpablovaldez.com/",
     languages: {
-      en: "https://vleonardojuanpablo.com/",
+      en: "https://juanpablovaldez.com/",
     },
   },
   openGraph: {
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
       "Leonardo Valdez | Frontend Engineer – React, TypeScript, Next.js Expert",
     description:
       "Portfolio of Leonardo Valdez, a Frontend Engineer specializing in React, TypeScript, and Next.js. Expert in building scalable web applications with modern technologies.",
-    url: "https://vleonardojuanpablo.com/",
+    url: "https://juanpablovaldez.com/",
     type: "website",
     images: [
       {
@@ -105,7 +105,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Leonardo Juan Pablo Valdez",
-      url: "https://vleonardojuanpablo.com/",
+      url: "https://juanpablovaldez.com/",
     },
   ],
   robots: {
@@ -127,9 +127,9 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const cookieStore = await cookies();
-  const themeCookie = cookieStore.get('theme');
-  const theme = (themeCookie?.value as Theme) || 'light';
-  
+  const themeCookie = cookieStore.get("theme");
+  const theme = (themeCookie?.value as Theme) || "light";
+
   return (
     <html lang="en" suppressHydrationWarning data-theme={theme}>
       <head>
@@ -150,24 +150,65 @@ export default async function RootLayout({
           </MenuProvider>
         </ThemeProvider>
         <Script
-          id="structured-data"
+          id="structured-data-person"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              name: "Leonardo Valdez",
-              url: "https://vleonardojuanpablo.com/",
+              name: "Juan Pablo Valdez",
+              givenName: "Juan Pablo",
+              familyName: "Valdez",
+              url: "https://juanpablovaldez.com/",
+              image: "https://juanpablovaldez.com/images/portfolio-img.webp",
+              email: "juanpaavaldezz@gmail.com",
               jobTitle: "Frontend Engineer",
-              knowsAbout: ["React", "TypeScript", "Next.js", "Web Development"],
+              description:
+                "Frontend Engineer specializing in React, TypeScript, and Next.js. Expert in building scalable web applications with modern technologies.",
+              knowsAbout: [
+                "React",
+                "TypeScript",
+                "Next.js",
+                "JavaScript",
+                "Web Development",
+                "Frontend Architecture",
+                "UI/UX Development",
+                "Node.js",
+              ],
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Tucumán",
+                addressCountry: "Argentina",
+              },
               worksFor: {
                 "@type": "Organization",
                 name: "Self-employed",
               },
               sameAs: [
-                "https://linkedin.com/in/leonardo-valdez",
+                "https://linkedin.com/in/juanpablovaldez",
                 "https://github.com/Orbitado",
+                "https://www.instagram.com/juanpabloovaldez",
+                "https://twitter.com/juanpaavaldez",
               ],
+            }),
+          }}
+        />
+        <Script
+          id="structured-data-website"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Juan Pablo Valdez Portfolio",
+              url: "https://juanpablovaldez.com/",
+              description:
+                "Portfolio of Juan Pablo Valdez, a Frontend Engineer specializing in React, TypeScript, and Next.js.",
+              author: {
+                "@type": "Person",
+                name: "Juan Pablo Valdez",
+                url: "https://juanpablovaldez.com/",
+              },
             }),
           }}
         />
