@@ -1,0 +1,63 @@
+Leonardo Juan Pablo Valdez
+FullStack Software Developer | Product Creator | Building robust architectures and optimizing scalability in the JavaScript ecosystem.
+Location: Argentina
+Email: juanpaavaldezz@gmail.com
+Phone: +54 381 613 4310
+LinkedIn: https://www.linkedin.com/in/juan-pablo-valdez
+GitHub: https://github.com/orbitado
+
+--- SUMMARY ---
+I am Juan Pablo Valdez, a Software Developer with a product mindset. I deeply engage in understanding the business, talking to customers, and making technical decisions that truly move metrics; I consider myself highly analytical. I believe the best code is the one that solves real user problems.
+
+I work with e-commerce and fintech startups, where I learned that performance, security, and UX are not optional—they are what separate a product that converts from one that doesn't. In a Swedish e-commerce company with 3,000+ monthly clients, I optimized checkout flows, Core Web Vitals, and conversion rates using real data from Analytics and Heatmaps.
+
+My main stack is React, Next.js, React Native, Node.js, and TypeScript, but what differentiates me is how I use it: with a focus on end-to-end ownership, from discovery to production. I complement this with Nest.js, Prisma, Docker, AWS, and CI/CD pipelines that maintain quality.
+
+Long-term, I would love to build the product of my dreams as a founder. For now, I am looking for remote Software roles in startups where I can grow, contribute my founder-mindset, and surround myself with smart people to learn from. Beyond code, I am passionate about economics, the startup ecosystem, blockchain, golf, and understanding how technology transforms industries.
+
+--- SKILLS ---
+Core: React, Next.js, React Native, Node.js, TypeScript, Nest.js.
+Tools & DevOps: Docker, AWS, CI/CD, Prisma, React Query.
+Languages: English (Full Professional), Spanish (Native/Bilingual).
+
+--- EXPERIENCE ---
+
+Wootic | FullStack Software Developer
+May 2025 - Present (9 months)
+Argentina
+
+Kontrava | FullStack Software Developer
+December 2023 - May 2025 (1 year 6 months)
+Location: Sweden (Remote)
+
+- Led performance initiatives for a multi-tenant e-commerce platform (3000+ monthly clients). Reduced LCP by 35% and FCP by 40%, followed by near-zero CLS, directly impacting conversion rates.
+- Deep dived into browser internals: Implemented DOM read/write separation to avoid layout thrashing, used requestIdleCallback/requestAnimationFrame for fluid 60fps scheduling, and custom debounce/throttling utilities.
+- Optimized Checkout End-to-End: A/B tested with real data from GA4 + Heatmaps, identified drop-off points, and shipped fixes. Resulted in a 22% increase in checkout completion.
+
+Globant | Software Developer Intern
+July 2023 - December 2023 (6 months)
+Argentina
+
+- Optimized performance and accessibility, achieving a 35% improvement in page load speed and WCAG 2.1 compliance using Lighthouse audits.
+
+Freelance | Fullstack Developer
+January 2022 - December 2023 (2 years)
+Argentina
+
+- Delivered 10+ applications for e-commerce and internal ops clients (React, Next.js, React Native).
+- Built reusable component libraries and managed AWS infrastructure (EC2, RDS, S3) with Terraform.
+
+--- EDUCATION ---
+
+Universidad del Norte 'Santo Tomás de Aquino'
+Degree: Software Development and Quality, Computer Science
+Dates: 2024 - 2026
+
+--- CERTIFICATIONS ---
+- FullStack Development Career
+- Backend Programming III: Advanced Backend Development with Node.js
+- Backend Programming II: Backend Design and Architecture with Node.js
+- Backend Programming I: Advanced Backend Development with Node.js
+- JavaScript Course
+- React.js Course
+- Web Development Course
