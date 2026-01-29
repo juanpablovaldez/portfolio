@@ -1,0 +1,24 @@
+name: portfolio
+
+services:
+  strapiDB:
+    container_name: portfolio_db
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: strapi
+      POSTGRES_PASSWORD: strapiPassword123
+      POSTGRES_DB: strapi
+    volumes:
+      - strapi-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - portfolio-network
+
+volumes:
+  strapi-data:
+
+networks:
+  portfolio-network:
+    driver: bridge
