@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "work_experiences",
+  "info": {
+    "singularName": "work-experience",
+    "pluralName": "work-experiences",
+    "displayName": "Work Experience",
+    "description": "Professional work experience entries"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "company": {
+      "type": "string",
+      "required": true
+    },
+    "companyUrl": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string",
+      "required": true
+    },
+    "startDate": {
+      "type": "string"
+    },
+    "endDate": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "description": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.text-item"
+    },
+    "technologies": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.technology"
+    },
+    "softSkills": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.skill-item"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

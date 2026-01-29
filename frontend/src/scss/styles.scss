@@ -1,0 +1,126 @@
+@import "./_variables.scss";
+
+[data-theme="light"] {
+  --bg-main: #f9fafb;
+  --bg-section: #ffffff;
+  --bg-card: #f9fafb;
+  --bg-box: #f3f4f6;
+  --bg-button: #e0e7ff;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --accent: #4f46e5;
+  --accent-transparent: rgba(78, 70, 229, 0.1);
+  --link-hover: #4338ca;
+}
+
+[data-theme="dark"] {
+  --bg-main: #111827;
+  --bg-section: #1f2937;
+  --bg-card: #111827;
+  --bg-box: #1f2937;
+  --bg-button: #1b1f42;
+  --text-primary: #f3f4f6;
+  --text-secondary: #d1d5db;
+  --accent: #818cf8;
+  --link-hover: #6366f1;
+}
+
+html {
+  max-width: 100vw;
+  overflow-x: hidden;
+  min-height: 200vh;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+main {
+  max-width: map-get($breakpoints, xl);
+  margin: 0 auto;
+}
+
+body {
+  background-color: var(--bg-main);
+  font-family: Onest, Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  line-height: inherit;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
+
+@import "./atoms/typography";
+@import "./atoms/buttons";
+@import "./atoms/general";
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap; /* Para evitar que el texto se rompa */
+}
+
+.responsive-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+// ==================================== NAVBAR ====================================
+@import "./_navbar.scss";
+// ==================================== SUMMARY ====================================
+@import "./_summary.scss";
+// ==================================== EXPERIENCE ====================================
+@import "./_experience.scss";
+// ==================================== EDUCATION ====================================
+@import "./_education.scss";
+// // ==================================== PROJECTS ====================================
+@import "./_projects.scss";
+// ==================================== SKILLS ====================================
+@import "./_skills.scss";
+// ==================================== CONTACT ====================================
+@import "./_contact.scss";
+// ==================================== NOT FOUND ====================================
+@import "./_not-found.scss";
+// ==================================== FOOTER ====================================
+@import "./_footer.scss";
+// ==================================== SCROLL TO TOP ====================================
+@import "./_scroll-to-top.scss";
+// ==================================== SKELETON ====================================
+@import "./components/_skeleton.scss";

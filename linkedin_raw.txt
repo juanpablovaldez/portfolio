@@ -1,0 +1,63 @@
+Leonardo Juan Pablo Valdez
+Fullstack Developer | Increased checkout conversions 22% for 3,000+ client e-commerce platform | React, Next.js, Node.js, TypeScript
+Location: Argentina
+Email: juanpaavaldezz@gmail.com
+Phone: +54 381 613 4310
+LinkedIn: https://www.linkedin.com/in/juanpablovaldez
+GitHub: https://github.com/orbitado
+
+--- SUMMARY ---
+Software Developer who treats code as a business tool, not just to write syntax.
+
+What I bring beyond code: I talk to customers, read the data, and make technical decisions that move metrics. In e-commerce and fintech, I learned that performance, security, and UX aren't nice-to-haves, they're what separates products that convert from ones that don't.
+
+Looking for: Remote roles at startups where I can own features end-to-end and learn from smart people. I'm building my own product PartySpot in my free time.
+
+My stack: React, Next.js, React Native, Node.js, TypeScript, Nest.js, Prisma, Docker, AWS, CI/CD.
+Outside work: business, economics, startups, blockchain, golf.
+
+--- SKILLS ---
+Core: React, Next.js, React Native, Node.js, TypeScript, Nest.js
+Tools & DevOps: Docker, AWS, CI/CD, Prisma, React Query, PostgreSQL, Terraform
+Languages: English (Full Professional), Spanish (Native/Bilingual)
+
+--- EXPERIENCE ---
+
+Wootic | Fullstack Software Developer
+May 2025 - Present
+Argentina
+
+Kontrava | Fullstack Software Developer
+December 2023 - May 2025
+Sweden (Remote)
+
+• Reduced Largest Contentful Paint by 35% and First Contentful Paint by 40% on a multi-tenant e-commerce platform serving 3,000+ monthly clients
+• Increased checkout completion rate by 22% through A/B testing with GA4 and heatmap data, identifying and fixing drop-off points
+• Eliminated layout thrashing and achieved 60fps performance using DOM read/write batching, requestIdleCallback, and custom debounce utilities
+
+Freelance | Fullstack Developer
+January 2022 - December 2023
+Argentina
+
+• Delivered 10+ applications for e-commerce and internal operations clients using React, Next.js, and React Native
+• Built reusable component libraries and managed AWS infrastructure (EC2, RDS, S3) with Terraform
+
+--- EDUCATION ---
+
+Universidad del Norte 'Santo Tomás de Aquino'
+Degree: Software Development and Quality, Computer Science
+Dates: 2024 - 2026
+
+Globant | Software Developer Intern
+Dates: 2023
+
+--- CERTIFICATIONS ---
+• AWS, Terraform & GitHub Actions Projects at Udemy
+• FullStack Development Career at Coderhouse
+• Backend Programming III: Backend Security and Quality with Nest.js at Coderhouse
+• Backend Programming II: Backend Design and Architecture with Node.js at Coderhouse
+• Backend Programming I: Advanced Backend Development with Node.js at Coderhouse
+• Frontend Development Career with React.js at Coderhouse
+• JavaScript Course at Coderhouse
+• React.js Course at Coderhouse
+• Web Development Fundamentals at Coderhouse

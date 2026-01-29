@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_technologies",
+  "info": {
+    "displayName": "Technology",
+    "icon": "code",
+    "description": "Technology or skill name"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

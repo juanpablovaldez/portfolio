@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_infos",
+  "info": {
+    "singularName": "contact-info",
+    "pluralName": "contact-infos",
+    "displayName": "Contact Info",
+    "description": "Contact section information and CTAs"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Let's Connect"
+    },
+    "description": {
+      "type": "text"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "ctaPrimaryLabel": {
+      "type": "string",
+      "default": "Send me an email"
+    },
+    "ctaSecondaryLabel": {
+      "type": "string",
+      "default": "Call me"
+    }
+  }
+}
