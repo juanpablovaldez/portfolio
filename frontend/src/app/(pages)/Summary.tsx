@@ -9,7 +9,7 @@ async function HeroContent() {
 
   const currentYear = new Date().getFullYear();
   const yearsOfExperience = currentYear - hero.yearsOfExperienceStart;
-  const resumeUrl = getStrapiMediaUrl(hero.resume) || "/resume.pdf";
+  const resumeUrl = getStrapiMediaUrl(hero.resume);
 
   return (
     <>
@@ -20,17 +20,19 @@ async function HeroContent() {
         </p>
       </article>
       <article className="summary__actions">
-        <a
-          href={resumeUrl}
-          download="Valdez Leonardo - Frontend Engineer.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn--primary"
-          aria-label="Download Resume in PDF format of Leonardo Valdez"
-        >
-          <Download className="btn__icon" />
-          <span>{hero.ctaPrimaryLabel}</span>
-        </a>
+        {resumeUrl && (
+          <a
+            href={resumeUrl}
+            download="Valdez Leonardo - Frontend Engineer.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn--primary"
+            aria-label="Download Resume in PDF format of Leonardo Valdez"
+          >
+            <Download className="btn__icon" />
+            <span>{hero.ctaPrimaryLabel}</span>
+          </a>
+        )}
         <Link
           href={`mailto:${hero.email}`}
           className="btn btn--secondary"
