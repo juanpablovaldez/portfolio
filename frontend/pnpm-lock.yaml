@@ -21,7 +21,7 @@ importers:
         specifier: ^0.456.0
         version: 0.456.0(react@19.2.4)
       next:
-        specifier: 15.5.11
+        specifier: ^15.2.8
         version: 15.5.11(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       next-sitemap:
         specifier: ^4.2.3
