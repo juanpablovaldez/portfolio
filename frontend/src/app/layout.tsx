@@ -34,9 +34,12 @@ export const metadata: Metadata = {
   title:
     "Juan Pablo Valdez | Software Developer | Product Developer | Product development with robust architectures and scalability optimization in the JavaScript ecosystem",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/favicon.svg",
+    apple: "/apple-icon.png",
   },
   description:
     "Portfolio of Juan Pablo Valdez, a Software Developer and Product Developer specializing in building robust product architectures and optimizing scalability in the JavaScript ecosystem.",
