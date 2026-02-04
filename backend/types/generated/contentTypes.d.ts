@@ -667,7 +667,7 @@ export interface ApiSiteSettingSiteSetting extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     siteName: Schema.Attribute.String &
-      Schema.Attribute.DefaultTo<'Leonardo Valdez'>;
+      Schema.Attribute.DefaultTo<'Juan Pablo Valdez'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

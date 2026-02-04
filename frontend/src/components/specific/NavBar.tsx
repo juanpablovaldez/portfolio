@@ -33,9 +33,9 @@ async function NavBar() {
             <h1 className="nav__logo">
               <Link
                 href="/"
-                aria-label="Link to the home page and Leonardo Valdez Logo."
+                aria-label="Link to the home page and Juan Pablo Valdez Logo."
               >
-                LV
+                JV
               </Link>
             </h1>
             <Link

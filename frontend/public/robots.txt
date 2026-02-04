@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://vleonardojuanpablo.com/sitemap.xml
+Sitemap: https://juanpablovaldez.com/sitemap.xml

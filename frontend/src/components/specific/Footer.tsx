@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-info">
           <p className="copyright">
-            &copy; {currentYear} Leonardo Valdez. All rights reserved.
+            &copy; {currentYear} Juan Pablo Valdez. All rights reserved.
           </p>
         </div>
 
@@ -17,7 +17,7 @@ const Footer = () => {
           <ul className="social-links" aria-label="Social media links">
             <li>
               <Link
-                href="https://linkedin.com/in/leonardo-valdez"
+                href="https://linkedin.com/in/juanpablovaldez"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn profile"
@@ -28,7 +28,7 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                href="https://github.com/Orbitado"
+                href="https://github.com/juanpablovaldez"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub profile"
@@ -50,7 +50,7 @@ const Footer = () => {
             </li>
             <div className="footer-contact">
               <Link
-                href="mailto:contact@vleonardojuanpablo.com"
+                href="mailto:juanpaavaldezz@gmail.com"
                 className="contact-link"
                 aria-label="Send me an email"
               >
