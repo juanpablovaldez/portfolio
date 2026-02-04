@@ -13,7 +13,11 @@ function ExpandableText({ text, maxLength = 100, className }: ExpandableTextProp
     <div className="expandable-text">
       <p className="expandable-text__content">{displayedText}</p>
       {text.length > maxLength && (
-        <button className="expandable-text__button" onClick={toggleExpand}>
+        <button
+          className="expandable-text__button"
+          onClick={toggleExpand}
+          aria-expanded={isExpanded}
+        >
           {isExpanded ? "See less" : "See more"}
         </button>
       )}
