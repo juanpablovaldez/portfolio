@@ -13,6 +13,10 @@ async function ExperienceList() {
     "work-experiences?populate=*&sort=order",
   );
 
+  if (!experiences || experiences.length === 0) {
+    return null;
+  }
+
   return (
     <ol className="experience__list">
       {experiences.map(

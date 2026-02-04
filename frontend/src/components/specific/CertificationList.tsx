@@ -7,6 +7,10 @@ async function CertificationList() {
     "certifications?sort=order",
   );
 
+  if (!certifications || certifications.length === 0) {
+    return null;
+  }
+
   return (
     <div className="education__list--certifications">
       <div className="education__header">

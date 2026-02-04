@@ -6,6 +6,10 @@ async function EducationList() {
     "educations?populate=*&sort=order",
   );
 
+  if (!educations || educations.length === 0) {
+    return null;
+  }
+
   return (
     <div className="education__container">
       <ol className="education__list">

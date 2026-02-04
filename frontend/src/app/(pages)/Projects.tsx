@@ -33,7 +33,15 @@ async function ProjectsList() {
   );
 }
 
-function Projects() {
+async function Projects() {
+  const strapiProjects = await getStrapiData<StrapiProject[]>(
+    "projects?populate=*&sort=order",
+  );
+
+  if (!strapiProjects || strapiProjects.length === 0) {
+    return null;
+  }
+
   return (
     <section id="projects" className="projects-section">
       <h2 className="section__heading">Projects</h2>

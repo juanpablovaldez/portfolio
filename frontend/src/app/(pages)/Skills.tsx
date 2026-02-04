@@ -65,7 +65,13 @@ async function SkillsList() {
   );
 }
 
-function Skills() {
+async function Skills() {
+  const skills = await getStrapiData<Skill[]>("skills?sort=order");
+
+  if (!skills || skills.length === 0) {
+    return null;
+  }
+
   return (
     <section id="skills" className="section">
       <h2 className="section__heading">Skills</h2>
