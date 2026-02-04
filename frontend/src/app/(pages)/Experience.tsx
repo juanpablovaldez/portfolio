@@ -21,7 +21,7 @@ async function Experience() {
       </h2>
       <article className="section__content">
         <Suspense fallback={<ExperienceSkeleton />}>
-          <ExperienceList />
+          <ExperienceList experiences={experiences} />
         </Suspense>
       </article>
     </section>

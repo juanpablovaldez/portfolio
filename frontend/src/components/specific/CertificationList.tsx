@@ -1,12 +1,11 @@
 import { Award, Github, Link2 } from "lucide-react";
 import Link from "next/link";
-import { getStrapiData } from "@/lib/strapi";
 
-async function CertificationList() {
-  const certifications = await getStrapiData<Certification[]>(
-    "certifications?sort=order",
-  );
+interface CertificationListProps {
+  certifications: Certification[];
+}
 
+function CertificationList({ certifications }: CertificationListProps) {
   if (!certifications || certifications.length === 0) {
     return null;
   }

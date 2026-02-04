@@ -2,20 +2,16 @@ import Link from "next/link";
 import TagList from "@/components/common/TagList";
 import ExpandableContainer from "../common/ExpandableContainer";
 import {
-  getStrapiData,
   flattenTextItems,
   flattenTechnologies,
   flattenSkillItems,
 } from "@/lib/strapi";
 
-async function ExperienceList() {
-  const experiences = await getStrapiData<WorkExperience[]>(
-    "work-experiences?populate=*&sort=order",
-  );
+interface ExperienceListProps {
+  experiences: WorkExperience[];
+}
 
-  if (!experiences || experiences.length === 0) {
-    return null;
-  }
+function ExperienceList({ experiences }: ExperienceListProps) {
 
   return (
     <ol className="experience__list">

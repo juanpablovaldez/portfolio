@@ -33,7 +33,7 @@ const LINKEDIN_DATA = {
   email: "juanpaavaldezz@gmail.com",
   phone: "+54 381 613 4310",
   linkedinUrl: "https://www.linkedin.com/in/juanpablovaldez",
-  githubUrl: "https://github.com/orbitado",
+  githubUrl: "https://github.com/juanpablovaldez",
 
   // Summary/Bio
   bio: `Fullstack developer who treats code as a business lever, not just syntax.

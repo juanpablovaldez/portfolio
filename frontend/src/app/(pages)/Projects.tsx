@@ -7,23 +7,13 @@ import {
   flattenTechnologies,
   getStrapiMediaUrl,
 } from "@/lib/strapi";
+import { Project } from "@/types/types";
 
-async function ProjectsList() {
-  const strapiProjects = await getStrapiData<StrapiProject[]>(
-    "projects?populate=*&sort=order",
-  );
+interface ProjectsListProps {
+  projects: Project[];
+}
 
-  // Transform Strapi data to match existing Project interface
-  const projects = strapiProjects.map((project) => ({
-    img: getStrapiMediaUrl(project.image) || "/placeholder.png",
-    title: project.title,
-    description: project.description,
-    features: flattenTextItems(project.features),
-    github: project.githubUrl,
-    demo: project.demoUrl,
-    technologies: flattenTechnologies(project.technologies),
-  }));
-
+function ProjectsList({ projects }: ProjectsListProps) {
   return (
     <>
       {projects.map((project) => (
@@ -42,12 +32,22 @@ async function Projects() {
     return null;
   }
 
+  const projects = strapiProjects.map((project) => ({
+    img: getStrapiMediaUrl(project.image) || "/placeholder.png",
+    title: project.title,
+    description: project.description,
+    features: flattenTextItems(project.features),
+    github: project.githubUrl,
+    demo: project.demoUrl,
+    technologies: flattenTechnologies(project.technologies),
+  }));
+
   return (
     <section id="projects" className="projects-section">
       <h2 className="section__heading">Projects</h2>
       <article className="projects">
         <Suspense fallback={<ProjectsSkeleton />}>
-          <ProjectsList />
+          <ProjectsList projects={projects} />
         </Suspense>
       </article>
     </section>
