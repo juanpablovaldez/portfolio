@@ -13,9 +13,9 @@ function Contact() {
       </article>
       <article className="contact__actions">
         <Link
-          href="mailto:vleonardojuanpablo@icloud.com"
+          href="mailto:juanpaavaldezz@gmail.com"
           className="btn btn--primary"
-          aria-label="Email Leonardo Valdez"
+          aria-label="Email Juan Pablo Valdez"
         >
           <Mail className="btn__icon" />
           <span>Send me an email</span>
@@ -23,7 +23,7 @@ function Contact() {
         <Link
           href="tel:+5493816134310"
           className="btn btn--secondary"
-          aria-label="Call Leonardo Valdez"
+          aria-label="Call Juan Pablo Valdez"
         >
           <Phone className="btn__icon" />
           <span>Call me</span>

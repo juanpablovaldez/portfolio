@@ -32,16 +32,16 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://juanpablovaldez.com/"),
   title:
-    "Leonardo Valdez | Frontend Engineer – React, TypeScript, Next.js Expert",
+    "Juan Pablo Valdez | Software Developer | Product Developer | Product development with robust architectures and scalability optimization in the JavaScript ecosystem",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    shortcut: "/favicon.svg",
+    apple: "/apple-icon.png",
   },
   description:
-    "Portfolio of Leonardo Valdez, a Frontend Engineer specializing in React, TypeScript, and Next.js. Expert in building scalable web applications with modern technologies.",
+    "Portfolio of Juan Pablo Valdez, a Software Developer and Product Developer specializing in building robust product architectures and optimizing scalability in the JavaScript ecosystem.",
   keywords: [
-    "Leonardo Valdez",
+    "Juan Pablo Valdez",
     "Frontend Developer",
     "Frontend Engineer",
     "React Developer",
@@ -78,9 +78,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Leonardo Valdez | Frontend Engineer – React, TypeScript, Next.js Expert",
+      "Juan Pablo Valdez | Software Developer | Product Developer | Product development with robust architectures and scalability optimization in the JavaScript ecosystem",
     description:
-      "Portfolio of Leonardo Valdez, a Frontend Engineer specializing in React, TypeScript, and Next.js. Expert in building scalable web applications with modern technologies.",
+      "Portfolio of Juan Pablo Valdez, a Software Developer and Product Developer specializing in building robust product architectures and optimizing scalability in the JavaScript ecosystem.",
     url: "https://juanpablovaldez.com/",
     type: "website",
     images: [
@@ -88,23 +88,23 @@ export const metadata: Metadata = {
         url: "/images/portfolio-img.webp",
         width: 1200,
         height: 630,
-        alt: "Leonardo Valdez Portfolio",
+        alt: "Juan Pablo Valdez Portfolio",
       },
     ],
-    siteName: "Leonardo Valdez Portfolio",
+    siteName: "Juan Pablo Valdez Portfolio",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Leonardo Valdez | Frontend Engineer Portfolio",
+    title: "Juan Pablo Valdez | Software Developer Portfolio",
     description:
-      "Portfolio of Leonardo Valdez, a Frontend Engineer specializing in React, TypeScript, and Next.js.",
+      "Portfolio of Juan Pablo Valdez, a Software Developer and Product Developer specializing in building robust product architectures and optimizing scalability in the JavaScript ecosystem.",
     images: ["/images/portfolio-img.webp"],
     creator: "@juanpaavaldez",
   },
   authors: [
     {
-      name: "Leonardo Juan Pablo Valdez",
+      name: "Juan Pablo Valdez",
       url: "https://juanpablovaldez.com/",
     },
   ],
@@ -162,9 +162,9 @@ export default async function RootLayout({
               url: "https://juanpablovaldez.com/",
               image: "https://juanpablovaldez.com/images/portfolio-img.webp",
               email: "juanpaavaldezz@gmail.com",
-              jobTitle: "Frontend Engineer",
+              jobTitle: "Software Developer & Product Developer",
               description:
-                "Frontend Engineer specializing in React, TypeScript, and Next.js. Expert in building scalable web applications with modern technologies.",
+                "Software Developer and Product Developer specializing in building robust product architectures and optimizing scalability in the JavaScript ecosystem.",
               knowsAbout: [
                 "React",
                 "TypeScript",
@@ -186,7 +186,7 @@ export default async function RootLayout({
               },
               sameAs: [
                 "https://linkedin.com/in/juanpablovaldez",
-                "https://github.com/Orbitado",
+                "https://github.com/juanpablovaldez",
                 "https://www.instagram.com/juanpabloovaldez",
                 "https://twitter.com/juanpaavaldez",
               ],
@@ -203,7 +203,7 @@ export default async function RootLayout({
               name: "Juan Pablo Valdez Portfolio",
               url: "https://juanpablovaldez.com/",
               description:
-                "Portfolio of Juan Pablo Valdez, a Frontend Engineer specializing in React, TypeScript, and Next.js.",
+                "Portfolio of Juan Pablo Valdez, a Software Developer and Product Developer specializing in building robust product architectures and optimizing scalability in the JavaScript ecosystem.",
               author: {
                 "@type": "Person",
                 name: "Juan Pablo Valdez",

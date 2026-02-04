@@ -14,7 +14,7 @@
   "attributes": {
     "siteName": {
       "type": "string",
-      "default": "Leonardo Valdez"
+      "default": "Juan Pablo Valdez"
     },
     "copyright": {
       "type": "string"

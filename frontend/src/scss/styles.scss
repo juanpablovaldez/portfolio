@@ -102,6 +102,31 @@ button {
   object-position: center;
 }
 
+// Global focus styles for accessibility
+.btn:focus-visible,
+.nav__link:focus-visible,
+.nav__theme-switcher:focus-visible,
+.nav__toggler:focus-visible,
+.expandable-container__button:focus-visible,
+.expandable-text__button:focus-visible,
+.tag-list__button:focus-visible,
+.skills__item:focus-visible,
+.scroll-to-top:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+// Respect user motion preferences
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 // ==================================== NAVBAR ====================================
 @import "./_navbar.scss";
 // ==================================== SUMMARY ====================================

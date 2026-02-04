@@ -24,10 +24,10 @@ export const navbarLinks = [
 export const menuIcons = [
   {
     name: "GitHub",
-    url: "https://github.com/LeonardoValdez",
+    url: "https://github.com/juanpablovaldez",
   },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/leonardo-valdez/",
+    url: "https://www.linkedin.com/in/juanpablovaldez/",
   },
 ];

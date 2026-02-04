@@ -4,6 +4,15 @@ import NavList from "./NavList";
 import Link from "next/link";
 
 function NavBar() {
+  const availableSections = {
+    summary: true,
+    experience: true,
+    education: true,
+    projects: true,
+    skills: true,
+    contact: true,
+  };
+
   return (
     <div className="nav-container">
       <header className="header">
@@ -12,9 +21,9 @@ function NavBar() {
             <h1 className="nav__logo">
               <Link
                 href="/"
-                aria-label="Link to the home page and Leonardo Valdez Logo."
+                aria-label="Link to the home page and Juan Pablo Valdez Logo."
               >
-                LV
+                JV
               </Link>
             </h1>
             <Link
@@ -24,7 +33,7 @@ function NavBar() {
             >
               Skip to main content
             </Link>
-            <NavList />
+            <NavList availableSections={availableSections} />
             <ul className="nav__list--togglers">
               <ThemeSwitcher />
               <NavToggler />

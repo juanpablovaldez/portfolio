@@ -19,7 +19,12 @@ function TagList({ list }: { list: string[] }) {
         ))}
       </ul>
       {list.length > maxVisibleTags && (
-        <button className="tag-list__button" onClick={toggleExpand}>
+        <button
+          className="tag-list__button"
+          onClick={toggleExpand}
+          aria-expanded={isExpanded}
+          aria-label={isExpanded ? "Show fewer tags" : `Show ${list.length - maxVisibleTags} more tags`}
+        >
           {isExpanded ? "See less" : `+${list.length - maxVisibleTags} more`}
         </button>
       )}

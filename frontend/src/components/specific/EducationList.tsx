@@ -1,10 +1,14 @@
 import { GraduationCap } from "lucide-react";
-import { getStrapiData, flattenTextItems } from "@/lib/strapi";
+import { flattenTextItems } from "@/lib/strapi";
 
-async function EducationList() {
-  const educations = await getStrapiData<Education[]>(
-    "educations?populate=*&sort=order",
-  );
+interface EducationListProps {
+  educations: Education[];
+}
+
+function EducationList({ educations }: EducationListProps) {
+  if (!educations || educations.length === 0) {
+    return null;
+  }
 
   return (
     <div className="education__container">

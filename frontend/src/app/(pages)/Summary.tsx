@@ -23,11 +23,11 @@ async function HeroContent() {
         {resumeUrl && (
           <a
             href={resumeUrl}
-            download="Valdez Leonardo - Frontend Engineer.pdf"
+            download="Juan Pablo Valdez - Software Developer.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn--primary"
-            aria-label="Download Resume in PDF format of Leonardo Valdez"
+            aria-label="Download Resume in PDF format of Juan Pablo Valdez"
           >
             <Download className="btn__icon" />
             <span>{hero.ctaPrimaryLabel}</span>
@@ -36,7 +36,7 @@ async function HeroContent() {
         <Link
           href={`mailto:${hero.email}`}
           className="btn btn--secondary"
-          aria-label="Send a mail to Leonardo Valdez"
+          aria-label="Send a mail to Juan Pablo Valdez"
         >
           <Mail className="btn__icon" />
           <span>{hero.ctaSecondaryLabel}</span>

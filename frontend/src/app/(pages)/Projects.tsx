@@ -7,13 +7,31 @@ import {
   flattenTechnologies,
   getStrapiMediaUrl,
 } from "@/lib/strapi";
+import { Project } from "@/types/types";
 
-async function ProjectsList() {
+interface ProjectsListProps {
+  projects: Project[];
+}
+
+function ProjectsList({ projects }: ProjectsListProps) {
+  return (
+    <>
+      {projects.map((project) => (
+        <Card key={project.title} project={project} />
+      ))}
+    </>
+  );
+}
+
+async function Projects() {
   const strapiProjects = await getStrapiData<StrapiProject[]>(
     "projects?populate=*&sort=order",
   );
 
-  // Transform Strapi data to match existing Project interface
+  if (!strapiProjects || strapiProjects.length === 0) {
+    return null;
+  }
+
   const projects = strapiProjects.map((project) => ({
     img: getStrapiMediaUrl(project.image) || "/placeholder.png",
     title: project.title,
@@ -25,21 +43,11 @@ async function ProjectsList() {
   }));
 
   return (
-    <>
-      {projects.map((project) => (
-        <Card key={project.title} project={project} />
-      ))}
-    </>
-  );
-}
-
-function Projects() {
-  return (
     <section id="projects" className="projects-section">
       <h2 className="section__heading">Projects</h2>
       <article className="projects">
         <Suspense fallback={<ProjectsSkeleton />}>
-          <ProjectsList />
+          <ProjectsList projects={projects} />
         </Suspense>
       </article>
     </section>

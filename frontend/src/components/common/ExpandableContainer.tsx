@@ -30,7 +30,11 @@ const ExpandableContainer: React.FC<ExpandableContainerProps> = ({
         {children}
       </div>
       <div className="expandable-container__actions">
-        <button className="expandable-container__button" onClick={toggleExpand}>
+        <button
+          className="expandable-container__button"
+          onClick={toggleExpand}
+          aria-expanded={isExpanded}
+        >
           {isExpanded ? "See less" : "See more"}
         </button>
       </div>

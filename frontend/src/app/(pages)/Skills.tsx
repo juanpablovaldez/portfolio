@@ -18,9 +18,11 @@ const categoryConfig = {
   },
 } as const;
 
-async function SkillsList() {
-  const skills = await getStrapiData<Skill[]>("skills?sort=order");
+interface SkillsListProps {
+  skills: Skill[];
+}
 
+function SkillsList({ skills }: SkillsListProps) {
   // Group skills by category
   const groupedSkills = skills.reduce(
     (acc, skill) => {
@@ -65,13 +67,19 @@ async function SkillsList() {
   );
 }
 
-function Skills() {
+async function Skills() {
+  const skills = await getStrapiData<Skill[]>("skills?sort=order");
+
+  if (!skills || skills.length === 0) {
+    return null;
+  }
+
   return (
     <section id="skills" className="section">
       <h2 className="section__heading">Skills</h2>
       <article className="section__content">
         <Suspense fallback={<SkillsSkeleton />}>
-          <SkillsList />
+          <SkillsList skills={skills} />
         </Suspense>
       </article>
     </section>
